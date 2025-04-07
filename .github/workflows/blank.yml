@@ -18,7 +18,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - name: authenticate
-        run: echo "DOCKER_PAT_KEY" | docker login -u redblackbird --password-stdin
+        run: echo "$DOCKER_PAT_KEY" | docker login -u redblackbird --password-stdin
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
