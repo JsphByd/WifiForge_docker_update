@@ -1,6 +1,6 @@
 FROM redblackbird/wififorge:latest
 
 WORKDIR /
-RUN rm -r Wifi*
+RUN rm -rf Wifi*
 RUN git clone https://github.com/blackhillsinfosec/WifiForge
-RUN sudo ./WifiForge/framework/setup.sh
+RUN chmod +x WifiForge/framework/setup/setup.sh && ./WifiForge/framework/setup/setup.sh
